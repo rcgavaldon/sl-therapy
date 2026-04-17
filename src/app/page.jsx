@@ -24,7 +24,7 @@ const phaseImgs = [
   "/images/gen-phase1.jpg",
   "/images/fisioterapia-invasiva.jpeg",
   "/images/compression-1.jpeg",
-  "/images/gen-performance.jpg",
+  "/images/suenas-campion.jpeg",
   "/images/gen-phase5.jpg",
 ];
 const statImgs = [

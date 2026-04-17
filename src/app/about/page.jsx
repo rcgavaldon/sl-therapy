@@ -139,7 +139,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="size-11 shrink-0 overflow-hidden rounded-full bg-neutral-100">
-                    <img src="/images/motivacion.jpeg" alt={item.name} className="size-full object-cover" />
+                    <img src="/images/prevencion-2.jpeg" alt={item.name} className="size-full object-cover" />
                   </div>
                   <div>
                     <p className="font-bold">{item.name}</p>

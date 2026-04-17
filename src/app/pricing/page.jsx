@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Button, Tabs, TabsContent, TabsList, TabsTrigger } from "@relume_io/relume-ui";
+import { Button } from "@relume_io/relume-ui";
 import { BiCheck, BiPhone } from "react-icons/bi";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -41,81 +41,52 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Pricing section */}
-      <section className="bg-white px-[5%] py-20 md:py-28">
-        <div className="container max-w-4xl">
+      {/* Pricing */}
+      <section className="bg-neutral-50 px-[5%] py-20 md:py-28">
+        <div className="container max-w-3xl">
           <div className="mb-12 text-center md:mb-16">
-            <Label>{p.section.label}</Label>
-            <h2 className="mb-3 text-4xl font-black md:text-5xl">{p.section.heading}</h2>
-            <p className="text-neutral-500 md:text-lg">{p.section.sub}</p>
+            <Label>{p.simple.label}</Label>
+            <h2 className="mb-3 text-4xl font-black md:text-5xl">{p.simple.heading}</h2>
+            <p className="text-neutral-500 md:text-lg">{p.simple.sub}</p>
           </div>
 
-          <Tabs defaultValue="eval">
-            <div className="mb-12 flex justify-center">
-              <TabsList className="rounded-full border border-neutral-200 bg-neutral-50 p-1">
-                <TabsTrigger value="eval" className="rounded-full px-8 py-2.5 text-sm font-semibold transition-all data-[state=active]:bg-neutral-900 data-[state=active]:text-white data-[state=active]:shadow-sm">
-                  {p.section.tab1}
-                </TabsTrigger>
-                <TabsTrigger value="rehab" className="rounded-full px-8 py-2.5 text-sm font-semibold transition-all data-[state=active]:bg-neutral-900 data-[state=active]:text-white data-[state=active]:shadow-sm">
-                  {p.section.tab2}
-                </TabsTrigger>
-              </TabsList>
+          {/* Two price tiles */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 mb-8">
+            <div className="rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-card">
+              <p className="mb-4 text-xs font-bold uppercase tracking-widest text-neutral-400">{p.simple.consultLabel}</p>
+              <div className="mb-3 text-6xl font-black text-brand md:text-7xl">{p.simple.consultPrice}</div>
+              <p className="text-sm text-neutral-500 leading-relaxed">{p.simple.consultSub}</p>
             </div>
+            <div className="rounded-2xl border-2 border-brand/25 bg-brand/5 p-8 text-center shadow-card">
+              <p className="mb-4 text-xs font-bold uppercase tracking-widest text-neutral-400">{p.simple.sessionLabel}</p>
+              <div className="mb-3 text-6xl font-black text-brand md:text-7xl">{p.simple.sessionPrice}</div>
+              <p className="text-sm text-neutral-500 leading-relaxed">{p.simple.sessionSub}</p>
+            </div>
+          </div>
 
-            <TabsContent value="eval" className="grid grid-cols-1 gap-6 data-[state=active]:animate-tabs md:grid-cols-2">
-              {p.section.evalCards.map((card, i) => (
-                <div key={i} className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-card-hover">
-                  <div className="mb-8 text-center">
-                    <h3 className="mb-4 text-base font-bold text-neutral-700">{card.heading}</h3>
-                    <div className="text-5xl font-black text-brand md:text-6xl">{card.price}</div>
-                    <p className="mt-2 text-sm text-neutral-400">{lang === "es" ? "por sesión" : "per session"}</p>
-                  </div>
-                  <ul className="mb-8 flex-1 space-y-3">
-                    {card.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm">
-                        <BiCheck className="mt-0.5 size-5 shrink-0 text-brand" />
-                        <span className="text-neutral-600">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href="/contact">
-                    <Button className="w-full rounded-full font-semibold">{card.cta}</Button>
-                  </Link>
+          {/* Includes list */}
+          <div className="rounded-2xl border border-neutral-100 bg-white p-8 shadow-card md:p-10">
+            <h3 className="mb-6 text-base font-bold text-neutral-800">{p.simple.includes.heading}</h3>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {p.simple.includes.items.map((item, i) => (
+                <div key={i} className="flex items-start gap-2.5 text-sm">
+                  <BiCheck className="mt-0.5 size-5 shrink-0 text-brand" />
+                  <span className="text-neutral-700">{item}</span>
                 </div>
               ))}
-            </TabsContent>
+            </div>
+          </div>
 
-            <TabsContent value="rehab" className="grid grid-cols-1 gap-6 data-[state=active]:animate-tabs md:grid-cols-2">
-              {p.section.rehabCards.map((card, i) => (
-                <div key={i} className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-card-hover">
-                  <div className="mb-8 text-center">
-                    <h3 className="mb-4 text-base font-bold text-neutral-700">{card.heading}</h3>
-                    <div className="text-5xl font-black text-brand md:text-6xl">{card.price}</div>
-                    {card.note && <p className="mt-2 text-sm font-medium text-accent">{card.note}</p>}
-                  </div>
-                  <ul className="mb-8 flex-1 space-y-3">
-                    {card.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm">
-                        <BiCheck className="mt-0.5 size-5 shrink-0 text-brand" />
-                        <span className="text-neutral-600">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href="/contact">
-                    <Button className="w-full rounded-full font-semibold">{card.cta}</Button>
-                  </Link>
-                </div>
-              ))}
-            </TabsContent>
-          </Tabs>
+          <p className="mt-6 text-center text-xs font-semibold uppercase tracking-widest text-neutral-400">
+            {p.simple.note}
+          </p>
 
-          {/* No hidden fees callout */}
-          <div className="mt-10 rounded-2xl bg-neutral-50 border border-neutral-100 p-6 text-center">
-            <p className="text-sm text-neutral-500">
-              {lang === "es"
-                ? "Sin costos ocultos. Agenda tu consulta gratis y recibe un presupuesto personalizado."
-                : "No hidden fees. Book your free consultation and get a personalized quote."}
-            </p>
+          <div className="mt-8 flex justify-center">
+            <Link href="/contact">
+              <Button className="rounded-full px-10 py-3 text-base font-semibold shadow-sm hover:shadow-md transition-shadow">
+                {p.simple.cta}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
