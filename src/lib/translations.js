@@ -90,6 +90,20 @@ export const translations = {
         sub: "Atención personalizada de alguien que conoce tu deporte por dentro y por fuera.",
         member: { name: "SL Therapy", role: "Especialista en rehabilitación deportiva", bio: "Certificado en fisioterapia deportiva con más de una década tratando atletas de todos los deportes. Enfoque personal en cada lesión." },
       },
+      howItWorks: {
+        label: "Proceso",
+        heading: "Así funciona",
+        steps: [
+          { number: "01", heading: "Consulta gratuita", sub: "Evaluamos tu lesión y tus metas. Sin costo y sin compromiso." },
+          { number: "02", heading: "Plan personalizado", sub: "Aplicamos las técnicas adecuadas según tu diagnóstico. Todo incluido a $80 por sesión." },
+          { number: "03", heading: "Regresa al deporte", sub: "Te acompañamos en cada fase hasta que vuelvas a hacer lo que amas." },
+        ],
+      },
+      serviceGroups: [
+        { heading: "Evaluación y diagnóstico", items: ["Análisis funcional de movimiento", "Evaluación biomecánica", "Pantalla de movimiento funcional (FMS)", "Diagnóstico musculoesquelético"] },
+        { heading: "Rehabilitación y terapias", items: ["Rehabilitación deportiva y postquirúrgica", "Punción seca (Dry Needling)", "Terapia manual ortopédica", "Liberación miofascial"] },
+        { heading: "Rendimiento y recuperación", items: ["Protocolo de retorno al deporte", "Fuerza y acondicionamiento", "Masaje deportivo", "Prevención de lesiones"] },
+      ],
     },
     footer: {
       newsletter: "Recibe consejos de recuperación y actualizaciones",
@@ -312,6 +326,20 @@ export const translations = {
         sub: "One-on-one care from someone who knows your sport inside and out.",
         member: { name: "SL Therapy", role: "Sports rehabilitation specialist", bio: "Certified in sports physical therapy with over a decade treating athletes across every sport. Personal approach to every injury." },
       },
+      howItWorks: {
+        label: "Process",
+        heading: "How it works",
+        steps: [
+          { number: "01", heading: "Free consultation", sub: "We evaluate your injury and your goals. No cost, no commitment." },
+          { number: "02", heading: "Personalized plan", sub: "We apply the right techniques based on your diagnosis. All included at $80 per session." },
+          { number: "03", heading: "Return to sport", sub: "We guide you through every phase until you're back doing what you love." },
+        ],
+      },
+      serviceGroups: [
+        { heading: "Evaluation & Diagnosis", items: ["Functional movement analysis", "Biomechanical evaluation", "Functional movement screen (FMS)", "Musculoskeletal diagnosis"] },
+        { heading: "Rehabilitation & Therapies", items: ["Sports and post-surgical rehab", "Dry Needling", "Orthopedic manual therapy", "Myofascial release"] },
+        { heading: "Performance & Recovery", items: ["Return to sport protocol", "Strength and conditioning", "Sports massage", "Injury prevention"] },
+      ],
     },
     footer: {
       newsletter: "Get recovery tips and updates sent to your inbox",
