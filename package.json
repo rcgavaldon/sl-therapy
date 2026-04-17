@@ -1,0 +1,25 @@
+{
+  "name": "sl-therapy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "@relume_io/relume-ui": "latest",
+    "@relume_io/relume-tailwind": "latest",
+    "framer-motion": "^11",
+    "react-icons": "^5",
+    "clsx": "^2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3",
+    "autoprefixer": "^10",
+    "postcss": "^8"
+  }
+}
