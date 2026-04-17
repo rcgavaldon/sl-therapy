@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@relume_io/relume-ui";
 import { BiCheck, BiPhone } from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
@@ -119,17 +120,17 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-neutral-950 px-[5%] py-24">
-        <img src="/images/gen-cta-bg.jpg" alt="" className="absolute inset-0 size-full object-cover opacity-15" />
-        <div className="relative z-10 container text-center">
-          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">{t.home.cta.heading}</h2>
-          <p className="mb-8 text-neutral-300 md:text-lg">{t.home.cta.sub}</p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+      <section className="bg-neutral-950 px-[5%] py-16 md:py-20">
+        <div className="container text-center">
+          <h2 className="mb-3 text-3xl font-black text-white md:text-4xl">{t.home.cta.heading}</h2>
+          <p className="mb-7 text-neutral-400">{t.home.cta.sub}</p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <Link href="/contact">
-              <Button variant="primary" className="rounded-full px-8 font-semibold">{c.bookCta}</Button>
+              <Button variant="primary" className="rounded-full px-7 font-semibold">{c.bookCta}</Button>
             </Link>
-            <a href={`tel:${c.phone}`} className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 py-2.5 text-white backdrop-blur hover:bg-white/20 transition-colors">
-              <BiPhone className="size-4" /> {c.phone}
+            <a href="https://wa.me/19152169504" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-2.5 font-semibold text-white hover:bg-[#1fba59] transition-colors">
+              <FaWhatsapp className="size-5" /> WhatsApp
             </a>
           </div>
         </div>

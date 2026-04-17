@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@relume_io/relume-ui";
 import { BiSolidStar, BiPhone, BiCheck } from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa";
 import { RxChevronRight } from "react-icons/rx";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -72,7 +73,7 @@ export default function HomePage() {
                 {i < 2 && (
                   <RxChevronRight className="absolute -right-5 top-2 hidden size-5 text-neutral-300 md:block" />
                 )}
-                <span className="mb-4 block text-6xl font-black leading-none text-brand/15 md:text-7xl">
+                <span className="mb-4 block text-6xl font-black leading-none text-neutral-300 md:text-7xl">
                   {step.number}
                 </span>
                 <h3 className="mb-2 text-xl font-black">{step.heading}</h3>
@@ -91,7 +92,7 @@ export default function HomePage() {
             <h2 className="mb-3 text-4xl font-black md:text-5xl">{h.services.heading}</h2>
             <p className="mx-auto max-w-md text-neutral-500 md:text-lg">{h.services.sub}</p>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {h.serviceGroups.map((group, i) => (
               <div key={i} className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
                 <div className="mb-5 flex items-center gap-3 border-b border-neutral-100 pb-4">
@@ -171,48 +172,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-neutral-100 px-[5%] py-20 md:py-28">
-        <div className="container mx-auto max-w-2xl">
-          <div className="mb-12 text-center">
-            <Label>{lang === "es" ? "FAQ" : "FAQ"}</Label>
-            <h2 className="mb-3 text-4xl font-black md:text-5xl">{h.faq.heading}</h2>
-            <p className="text-neutral-500">{h.faq.sub}</p>
-          </div>
-          <div className="divide-y divide-neutral-200">
-            {h.faq.items.map((item, i) => (
-              <div key={i} className="py-6">
-                <h3 className="mb-2.5 text-base font-bold md:text-lg">{item.q}</h3>
-                <p className="text-neutral-600 leading-relaxed">{item.a}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 rounded-2xl bg-white p-8 text-center shadow-card border border-neutral-200">
-            <h4 className="mb-2 text-xl font-bold">{h.faq.stillQuestions}</h4>
-            <p className="mb-6 text-neutral-500">{h.faq.callUs}</p>
+      {/* CTA */}
+      <section className="bg-neutral-950 px-[5%] py-20 md:py-28">
+        <div className="container text-center">
+          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">{h.cta.heading}</h2>
+          <p className="mx-auto mb-8 max-w-md text-neutral-400 md:text-lg">{h.cta.sub}</p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <Link href="/contact">
-              <Button variant="secondary" className="rounded-full px-7">{c.contactUs}</Button>
+              <Button variant="primary" className="rounded-full px-8 py-3 font-semibold">{c.bookCta}</Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA — subtle bg image, dark */}
-      <section className="relative overflow-hidden bg-neutral-950 px-[5%] py-24 md:py-32">
-        <img src="/images/gen-cta-bg.jpg" alt="" className="absolute inset-0 size-full object-cover opacity-15" />
-        <div className="relative z-10 container text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand">
-            {lang === "es" ? "Próximo Paso" : "Next Step"}
-          </p>
-          <h2 className="mb-5 text-4xl font-black text-white md:text-6xl">{h.cta.heading}</h2>
-          <p className="mx-auto mb-10 max-w-md text-neutral-300 md:text-lg">{h.cta.sub}</p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link href="/contact">
-              <Button variant="primary" className="rounded-full px-8 py-3 text-base font-semibold shadow-lg">
-                {c.bookCta}
-              </Button>
-            </Link>
-            <a href={`tel:${c.phone}`} className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 py-3 text-base text-white backdrop-blur hover:bg-white/20 transition-colors">
+            <a href="https://wa.me/19152169504" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-3 font-semibold text-white hover:bg-[#1fba59] transition-colors">
+              <FaWhatsapp className="size-5" /> WhatsApp
+            </a>
+            <a href={`tel:${c.phone}`} className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-white hover:bg-white/20 transition-colors">
               <BiPhone className="size-4" /> {c.phone}
             </a>
           </div>

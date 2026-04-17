@@ -100,8 +100,7 @@ export const translations = {
         ],
       },
       serviceGroups: [
-        { heading: "Evaluación y diagnóstico", items: ["Análisis funcional de movimiento", "Evaluación biomecánica", "Pantalla de movimiento funcional (FMS)", "Diagnóstico musculoesquelético"] },
-        { heading: "Rehabilitación y terapias", items: ["Rehabilitación deportiva y postquirúrgica", "Punción seca (Dry Needling)", "Terapia manual ortopédica", "Liberación miofascial"] },
+        { heading: "Evaluación y tratamiento", items: ["Diagnóstico funcional y biomecánico", "Rehabilitación deportiva y postquirúrgica", "Punción seca (Dry Needling)", "Terapia manual y liberación miofascial"] },
         { heading: "Rendimiento y recuperación", items: ["Protocolo de retorno al deporte", "Fuerza y acondicionamiento", "Masaje deportivo", "Prevención de lesiones"] },
       ],
     },
@@ -134,13 +133,11 @@ export const translations = {
       cats: {
         label: "Lo que incluye",
         heading: "Lo que incluye cada sesión",
-        sub: "Según tu diagnóstico, utilizamos las herramientas necesarias de cualquiera de estas categorías.",
+        sub: "Según tu diagnóstico, aplicamos lo que necesitas. Todo bajo el mismo precio.",
         items: [
-          { label: "Evaluación y diagnóstico", services: ["Análisis funcional de movimiento", "Evaluación biomecánica completa", "Pantalla de movimiento funcional (FMS)", "Diagnóstico musculoesquelético"] },
-          { label: "Rehabilitación deportiva y postquirúrgica", services: ["Recuperación de ACL, hombro y tobillo", "Rehabilitación postquirúrgica completa", "Dolor lumbar y cervical", "Tendinopatías y lesiones musculares"] },
-          { label: "Terapias especializadas", services: ["Punción seca (Dry Needling)", "Neuromodulación percutánea", "Terapia manual ortopédica", "Liberación miofascial"] },
-          { label: "Rendimiento y prevención", services: ["Protocolo de retorno al deporte", "Fuerza y acondicionamiento", "Prevención de lesiones", "Programas específicos por deporte"] },
-          { label: "Recuperación y bienestar", services: ["Masaje deportivo", "Terapia de compresión", "Movilidad y flexibilidad"] },
+          { label: "Evaluación y diagnóstico", services: ["Análisis funcional de movimiento", "Evaluación biomecánica", "Pantalla FMS", "Diagnóstico musculoesquelético"] },
+          { label: "Rehabilitación y terapias", services: ["Rehabilitación deportiva y postquirúrgica", "Dolor lumbar y cervical", "Punción seca (Dry Needling)", "Terapia manual y liberación miofascial", "Neuromodulación percutánea"] },
+          { label: "Rendimiento y recuperación", services: ["Protocolo de retorno al deporte", "Fuerza y acondicionamiento", "Masaje deportivo", "Prevención de lesiones"] },
         ],
       },
       treats: {
@@ -336,8 +333,7 @@ export const translations = {
         ],
       },
       serviceGroups: [
-        { heading: "Evaluation & Diagnosis", items: ["Functional movement analysis", "Biomechanical evaluation", "Functional movement screen (FMS)", "Musculoskeletal diagnosis"] },
-        { heading: "Rehabilitation & Therapies", items: ["Sports and post-surgical rehab", "Dry Needling", "Orthopedic manual therapy", "Myofascial release"] },
+        { heading: "Evaluation & Treatment", items: ["Functional and biomechanical diagnosis", "Sports and post-surgical rehab", "Dry Needling", "Manual therapy and myofascial release"] },
         { heading: "Performance & Recovery", items: ["Return to sport protocol", "Strength and conditioning", "Sports massage", "Injury prevention"] },
       ],
     },
@@ -370,13 +366,11 @@ export const translations = {
       cats: {
         label: "What's included",
         heading: "What every session covers",
-        sub: "Based on your diagnosis, we use the tools your recovery requires from any of these categories.",
+        sub: "Based on your diagnosis, we apply what you need. All under one price.",
         items: [
-          { label: "Evaluation & Diagnosis", services: ["Functional movement analysis", "Full biomechanical evaluation", "Functional movement screen (FMS)", "Musculoskeletal diagnosis"] },
-          { label: "Sports & Post-Surgical Rehab", services: ["ACL, shoulder, and ankle recovery", "Complete post-surgical rehabilitation", "Lower back and neck pain", "Tendinopathies and muscle injuries"] },
-          { label: "Specialized Therapies", services: ["Dry Needling", "Percutaneous neuromodulation", "Orthopedic manual therapy", "Myofascial release"] },
-          { label: "Performance & Prevention", services: ["Return to play protocol", "Strength and conditioning", "Injury prevention", "Sport-specific programs"] },
-          { label: "Recovery & Wellness", services: ["Sports massage", "Compression therapy", "Mobility and flexibility"] },
+          { label: "Evaluation & Diagnosis", services: ["Functional movement analysis", "Biomechanical evaluation", "FMS screening", "Musculoskeletal diagnosis"] },
+          { label: "Rehabilitation & Therapies", services: ["Sports and post-surgical rehab", "Lower back and neck pain", "Dry Needling", "Manual therapy and myofascial release", "Percutaneous neuromodulation"] },
+          { label: "Performance & Recovery", services: ["Return to sport protocol", "Strength and conditioning", "Sports massage", "Injury prevention"] },
         ],
       },
       treats: {

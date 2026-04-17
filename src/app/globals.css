@@ -15,7 +15,7 @@
   }
 
   body {
-    @apply antialiased text-neutral-900 bg-neutral-50;
+    @apply antialiased text-neutral-900 bg-neutral-200;
     font-feature-settings: "kern" 1, "liga" 1;
   }
 
